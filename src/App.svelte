@@ -1,5 +1,5 @@
 <script>
-  import meetups from './Meetups/meetups-store.js'
+  import meetups from './Meetups/meetups-store.js' //the $ in front of meetups, in the template below, automatically subscribes it to the store
   import Header from './UI/Header.svelte'
   import MeetupGrid from './Meetups/MeetupGrid.svelte'
   import TextInput from './UI/TextInput.svelte'
@@ -57,6 +57,7 @@
     {/if}
     <MeetupGrid
       meetups={$meetups}
+  
       on:showdetails={showDetails}
       on:edit={startEdit}
       on:add={() => {editMode = 'edit'}} 
