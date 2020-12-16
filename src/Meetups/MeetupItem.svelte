@@ -20,7 +20,7 @@
 
   const toggleFavorite = () => {
     isLoading = true;
-    fetch(`https://svelte-fetch-test-default-rtdb.europe-west1.firebasedatabase.app/meetups/${id}.json`, {
+    fetch(`https://your-api-url/${id}.json`, {
       method: 'PATCH',
       body: JSON.stringify({ isFavorite: !isFav }),
       headers: { 'Content-Type': 'application/json' }
